@@ -1,21 +1,18 @@
 #include <stdio.h>
 #include "myBank.c"
 void messege(){
-    printf("Enter the char of operation:\n");
-    printf("'O': Open an account\n");
-    printf("'B': Print balance of an account\n");
-    printf("'D': Deposit\n");
-    printf("'W': Withdrawal\n");
-    printf("'C': Close account\n");
-    printf("'I': Add interest to all accounts\n");
-    printf("'P': Print all opened accounts\n");
-    printf("'E': Close all accounts and exit program\n");
-    printf("Your choice: ");
-
+    printf("\nPlease choose a transaction type:\n");
+    printf(" O-Open Account\n");
+    printf(" B-Balance Inquiry\n");
+    printf(" D-Deposit\n");
+    printf(" W-Withdrawal\n");
+    printf(" C-Close Account\n");
+    printf(" I-Interest\n");
+    printf(" P-Print\n");
+    printf(" E-Exit\n");
 }
-int main() {
 
-    printf("Welcome!\n");
+int main() {
     messege();
     char c;
     scanf("%c", &c);
@@ -44,9 +41,8 @@ int main() {
                 myP();
                 break;
             default:
-                printf("Oops.. try again! \n");
+                printf("Invalid transaction type\n");
         }
-        printf("\n");
         messege();
         scanf(" %c", &c);
     }
